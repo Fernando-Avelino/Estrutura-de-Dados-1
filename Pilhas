@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+  int i;
+	int aux;
+  int num = 0; 
+	int lim = num;
+	int vetor[30];
+	int c;
+	
+	for(c=0; c<30; c++){
+		while(num  < lim);{
+			printf("Digite um numero \n");
+			scanf("%d", &num);
+			printf("\n");
+		if(num % 2  == 0){
+			printf("%d E um numero PAR \n", num);
+	}
+		else{
+			printf("%d E um numero IMPAR \n", num);
+	}
+	} 
+	
+    for ( i = 0; i < num; i++ )
+        printf("%d ", vetor[i]);
+
+    printf("\n\n\n");
+
+    for ( i = 0; i < ( num / 2 ); i++ ) {
+        aux = vetor[i];
+        vetor[i] = vetor[ (num - 1) - i ];
+        vetor[ (num - 1) - i ] = aux;
+    }
+
+    for ( i = 0; i < num; i++ )
+        printf("%d ", vetor[i]);
+
+    return 0;
+}
